@@ -16,7 +16,7 @@
             "metadata": {
                 "label": "dom/GetElement",
                 "x": 252,
-                "y": 180,
+                "y": 108,
                 "width": 72,
                 "height": 72
             }
@@ -25,8 +25,8 @@
             "component": "core/Output",
             "metadata": {
                 "label": "core/Output",
-                "x": 432,
-                "y": 360,
+                "x": 468,
+                "y": 396,
                 "width": 72,
                 "height": 72
             }
@@ -36,7 +36,7 @@
             "metadata": {
                 "label": "dom/WriteHtml",
                 "x": 684,
-                "y": 288,
+                "y": 360,
                 "width": 72,
                 "height": 72
             }
@@ -45,7 +45,7 @@
             "component": "dom/GetElement",
             "metadata": {
                 "label": "dom/GetElement",
-                "x": 252,
+                "x": 180,
                 "y": 288,
                 "width": 72,
                 "height": 72
@@ -70,6 +70,16 @@
                 "width": 72,
                 "height": 72
             }
+        },
+        "core/Output_7a7cd": {
+            "component": "core/Output",
+            "metadata": {
+                "label": "core/Output",
+                "x": 396,
+                "y": 504,
+                "width": 72,
+                "height": 72
+            }
         }
     },
     "connections": [
@@ -81,8 +91,7 @@
             "tgt": {
                 "process": "dom/WriteHtml_fpz6j",
                 "port": "container"
-            },
-            "metadata": {}
+            }
         },
         {
             "src": {
@@ -131,8 +140,7 @@
             "tgt": {
                 "process": "core/Kick_ey1nh",
                 "port": "in"
-            },
-            "metadata": {}
+            }
         },
         {
             "src": {
@@ -142,8 +150,33 @@
             "tgt": {
                 "process": "dom/WriteHtml_fpz6j",
                 "port": "html"
+            }
+        },
+        {
+            "src": {
+                "process": "dom/GetElement_7amk2",
+                "port": "error"
             },
-            "metadata": {}
+            "tgt": {
+                "process": "core/Output_7a7cd",
+                "port": "in"
+            },
+            "metadata": {
+                "route": 1
+            }
+        },
+        {
+            "src": {
+                "process": "dom/GetElement_xvz54",
+                "port": "error"
+            },
+            "tgt": {
+                "process": "core/Output_7a7cd",
+                "port": "in"
+            },
+            "metadata": {
+                "route": 1
+            }
         },
         {
             "data": "#button",
